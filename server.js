@@ -28,7 +28,7 @@ app.use((req, res, next) => {
     console.log('----------------LOGS-----------------\n', log);
     fs.appendFileSync('server.log', log + '\n', (err) => {
         if(err) {
-            console.log('Unable to append to server.log');
+            console.log('Unable to append to server.log file');
         }
     });
     next();
